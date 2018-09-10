@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+     
+       <div> 
+         <button mat-mini-fab color="warn"  (click)="onSideNavButtonClick()" color="accent">
+           <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      <div fxLayout class="headerCls">
+        <div class="logo1"></div>
+        <div>
+          <h1>Conduent Text Messaging Service</h1>
+        </div>
+      </div>
+      
+       <!-- <div><a routerLink="/">LOGO</a></div>
+       <div  fxFlex fxLayout fxLayoutAlign="end" fxLayoutGap="10px" fxHide.xs>
+         <a *ngIf="!isAuth" routerLink="/signup">Signup</a>
+         <a *ngIf="isAuth" routerLink="/training">Training</a>
+         <a *ngIf="!isAuth" routerLink="/login">Login</a>
+         <a *ngIf="isAuth" style="cursor: pointer;" (click)="onLogout()">Logout</a>
+         <a *ngIf="isAuth" routerLink="/welcome">Welcome</a>
+       </div> -->
+    </mat-toolbar-row>
+</mat-toolbar> 
+
+

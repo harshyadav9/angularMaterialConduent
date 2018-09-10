@@ -1,0 +1,33 @@
+
+
+.header__list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.logo1{
+    background: url("../../../assets/images/logo.png");
+    background-size: contain;
+    width: 109px;
+    height: 34px;
+    background-repeat: no-repeat; 
+}
+
+
+.logo2{
+    background: url("../../../assets/images/logonew.png");
+    background-size: contain;
+    width: 160px;
+    height: 108px;
+    background-repeat: no-repeat;
+}
+
+
+.headerCls{
+    margin: auto;
+}
+h1,h2,h3,p{
+    margin:0
+}
+

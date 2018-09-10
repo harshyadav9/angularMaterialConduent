@@ -1,0 +1,24 @@
+<div [@.disabled]="true">
+        <mat-tab-group selectedIndex="3">
+                <mat-tab label="Upload CSV"> 
+                        <ng-template matTabContent>
+                        </ng-template>
+                </mat-tab>
+                <mat-tab label="Text History">
+                    <ng-template matTabContent>
+                         <app-opt-in></app-opt-in>
+                    </ng-template> </mat-tab>
+                <mat-tab label="Broadcast"> 
+                    <ng-template matTabContent>
+                        <app-broadcast style="display:block"></app-broadcast>
+                    </ng-template>
+                </mat-tab>
+                <!-- <mat-tab label="Fourth">
+                    <ng-template matTabContent>
+                    </ng-template>
+                </mat-tab> -->
+        </mat-tab-group>
+</div>
+
+
+

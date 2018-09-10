@@ -1,0 +1,67 @@
+<!-- <mat-card>
+  <mat-card-title style="text-align: center;">
+    Login page
+  </mat-card-title>
+  <mat-card-content>
+    <section class="login-form">
+        <form fxLayout="column" fxLayoutGap="5px" fxLayoutAlign="center center" [formGroup] ="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+            <mat-form-field fxFlex="1 1 auto">
+                <input type="text" name="username" matInput [formControl]="loginForm.controls['username']" placeholder = "Your username">
+                <mat-error *ngIf="loginForm.controls['username'].hasError('required')">Email must not be empty</mat-error>
+                <mat-error *ngIf="!loginForm.controls['username'].hasError('required')">Email should be a valid email</mat-error>
+            </mat-form-field>
+
+            <mat-form-field fxFlex="1 1 auto">
+                <input type="password" name="password" matInput [formControl]="loginForm.controls['password']"  minlength="6"  placeholder="Your password">
+                <mat-error *ngIf="loginForm.controls['password'].hasError('required')">password must not be empty</mat-error>                
+            </mat-form-field>
+            <button type="submit" [disabled]="!loginForm.valid" mat-raised-button color="primary">Submit</button>
+        </form>
+    </section>    
+  </mat-card-content>
+</mat-card> -->
+
+
+<div class="login__container">
+    <mat-card class="login__card">
+            <!-- <mat-card-header class="header__Styl">
+                 Login                 
+            </mat-card-header> -->
+            <mat-card-content class="login__card__content">
+                    <!-- <form fxLayout="column" fxLayoutGap="5px" fxLayoutAlign="center center" [formGroup] ="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+                            <mat-form-field fxFlex="1 1 auto">
+                                <input type="text" name="username" matInput [formControl]="loginForm.controls['username']" placeholder = "Your username">
+                                <mat-error *ngIf="loginForm.controls['username'].hasError('required')">Email must not be empty</mat-error>
+                                <mat-error *ngIf="!loginForm.controls['username'].hasError('required')">Email should be a valid email</mat-error>
+                            </mat-form-field>
+                
+                            <mat-form-field fxFlex="1 1 auto">
+                                <input type="password" name="password" matInput [formControl]="loginForm.controls['password']"  minlength="6"  placeholder="Your password">
+                                <mat-error *ngIf="loginForm.controls['password'].hasError('required')">password must not be empty</mat-error>                
+                            </mat-form-field>
+                            <button type="submit" [disabled]="!loginForm.valid" mat-raised-button color="primary">Submit</button>
+                        </form> -->
+                        <form [formGroup] ="loginForm" class="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+                            <mat-form-field class="loginFormField"> 
+                                    <input type="text" name="username"  matInput [formControl]="loginForm.controls['username']" placeholder = "Your username">
+                                    <mat-error *ngIf="loginForm.controls['username'].hasError('required')">Username must not be empty</mat-error>
+                                    <!-- <mat-error *ngIf="!loginForm.controls['username'].hasError('required')">Email should be a valid email</mat-error> -->
+                            </mat-form-field>
+
+                            <mat-form-field class="loginFormField"> 
+                                    <input type="password" name="password"  matInput [formControl]="loginForm.controls['password']" placeholder = "Your password"/>
+                                    <mat-error *ngIf="loginForm.controls['password'].hasError('required')">password must not be empty</mat-error>
+                            </mat-form-field>
+
+                                    <button  class="login__button" type="submit" [disabled]="!loginForm.valid"  mat-raised-button color="primary">Submit</button>
+                            
+                            
+                        </form>
+            </mat-card-content>
+            
+    </mat-card>
+</div>
+
+
+
+

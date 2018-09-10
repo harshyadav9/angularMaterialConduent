@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+/* @import url('https://fonts.googleapis.com/css?family=Do+Hyeon'); */
+html , body{
+    font-family: 'Open Sans' !important;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;    
+}
+
+.mat-tab-label{
+    min-width: 33% !important;
+}
+
+.mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination{
+    display: none !important;
+}
+
+
+/* @media (max-width: 599px){
+    .mat-tab-label{
+        min-width: 72px;
+    }
+    
+} */
+/* .mat-progress-spinner.mat-accent circle, .mat-spinner.mat-accent circle{
+    stroke: #3f51b5 !important;
+} */

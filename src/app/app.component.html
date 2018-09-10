@@ -1,0 +1,23 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+      <!-- <button mat-raised-button  (click)="sidenav.toggle()" color="accent">Click me</button> -->
+      <app-header  (onSideNavClick) = "sidenav.toggle()"></app-header>
+      <!-- <app-landing></app-landing> -->
+     
+      <main class="head__container">
+        
+          <div class="spinnerContainer" *ngIf="spinnerFlag">
+              <mat-spinner class="spinnerCls"  *ngIf="spinnerFlag" color="warn"></mat-spinner>
+          </div>
+         
+          <router-outlet></router-outlet>
+          <!-- <app-test></app-test> -->
+      </main>
+
+      
+      
+  </mat-sidenav-content>
+</mat-sidenav-container>

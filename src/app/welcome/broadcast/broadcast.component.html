@@ -1,0 +1,66 @@
+<section class="container">
+  <div class="container__card" fxLayout='column'>
+      <form>
+          <mat-form-field class="example-full-width">
+              <input type="text" matInput placeholder="Broadcast name">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+              <input type="text" matInput placeholder="Short Code">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+              <input type="text" matInput placeholder="External Campaign Reference">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+              <mat-select placeholder="Campaign" [(value)]="selected">
+                <mat-option>None</mat-option>
+                <mat-option value="option1">Option 1</mat-option>
+                <mat-option value="option1">Option 2</mat-option>
+                <mat-option value="option1">Option 3</mat-option>               
+              </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+              <mat-select placeholder="List" [(value)]="selected1">
+                <mat-option>None</mat-option>
+                <mat-option value="option1">List 1</mat-option> 
+                <mat-option value="option1">List 2</mat-option> 
+                <mat-option value="option1">List 3</mat-option>               
+              </mat-select>
+          </mat-form-field>
+
+          <!-- <mat-radio-group class="container__radio">
+              <mat-radio-button class="container__radio__first"  [value]="1" [(ngModel)]="a"  name="radio1" (click)="hideTimeFlag = false">send manually</mat-radio-button>
+              <mat-radio-button [value]="2" [(ngModel)]="b"  name="radio2" (click)="radioClick()">Schedule for delivery</mat-radio-button>
+          </mat-radio-group> -->
+
+          <mat-radio-group  class="container__radio" fxLayout fxLayout.lt-md="column" [fxShow.lt-md]="main">
+            <mat-radio-button class="container__radio__first" value="1" (change)="hideTimeFlag = false">send manually</mat-radio-button>
+            <mat-radio-button value="2" (change)="radioClick()">Schedule for delivery</mat-radio-button>
+          </mat-radio-group>
+
+          <!-- <p [@simpleFadeAnimation]="param" style="opacity:0">asasass</p> -->
+          <div  class="container__time"   *ngIf="hideTimeFlag">
+                <mat-form-field class="time" >
+                        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                        <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field>
+          
+                <mat-form-field >
+                        <input matInput [ngxTimepicker]="toggleTimepicker"  placeholder="Time" readonly>
+                        <ngx-material-timepicker-toggle matPrefix [for]="toggleTimepicker"></ngx-material-timepicker-toggle>
+                        <ngx-material-timepicker #toggleTimepicker></ngx-material-timepicker>                              
+                </mat-form-field>
+          </div>
+          
+                    <!-- <input   [ngxTimepicker]="default" placeholder="Choose time">
+                    <ngx-material-timepicker #default></ngx-material-timepicker> -->
+           
+
+           
+      </form>
+  </div>
+</section>
